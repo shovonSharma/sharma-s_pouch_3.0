@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+  margin: 0;
+  padding-top: 0.28rem;
+  /* padding-bottom: 0.3rem; */
+}
+
+body{
+  background:   #051024;
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 6em 'Montserrat';
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: -38px;
+    margin-bottom: 200px;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #4D163D;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #cf1578;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #e8d21d;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #039fbe;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #b20238;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+
+
+
+.GRID{
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr;
+}
+
+.account-and-share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust margin-bottom as needed */
+}
+
+
+
+
+.App {
+  text-align: center;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+h3,
+p {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  align-items: right;
+}
+
+.share {
+  padding: 12px;
+  margin-top: 0px;
+  vertical-align: center;
+  background: #f44336;
+  width: 70px;
+  height: 45px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: -1;
+}
+
+.share:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Css for Navbar */
+
+.navbar {
+  overflow: hidden;
+  background-color: #282828;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Set a high z-index value to make sure it appears on top of other elements */
+  
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+/* wave footer */
+
+
+
+
+section{
+  position: relative;
+  width: 100%;
+  height: 28vh;
+  background: #051024;
+  overflow: hidden;
+}
+
+.wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg");
+  background-size: 1600px 198;
+}
+
+.wave1{
+  animation: animate-wave-1 10s linear infinite; 
+  z-index: 1000;
+  opacity: 1; 
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+.wave2{
+  animation: animate-wave-2 5s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 0px;
+}
+.wave3{
+  animation: animate-wave-3 10s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 0px;
+}
+
+.wave4{
+  animation: animate-wave-4 2s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 0px; 
+}
+
+@keyframes animate-wave-1{0% {background-position-x: 0;}
+  100% {background-position-x: 1600px;}
+}
+
+@keyframes animate-wave-2{0% {background-position-x: 0;}
+  100% {background-position-x: -1600px;}
+}
+
+@keyframes animate-wave-3{0% {background-position-x: 0;}
+  100% {background-position-x: 1600px;}
+}
+
+@keyframes animate-wave-4{0% {background-position-x: 0;}
+  100% {background-position-x: -1600px;}
+}
